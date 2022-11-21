@@ -4,6 +4,7 @@ import cv2 as cv
 import numpy as np
 import os
 import matplotlib.pyplot as plt
+import pandas as pd
 import tensorflow as tf
 import itertools
 import random
@@ -39,9 +40,13 @@ def gen_pairs(org_folder_path , forg_folder_path , writer_strt_indx , writer_end
         for pair , label in (random.sample(list(zip(pairs , labels)) , 276)):
             all_pairs.append(pair)
             all_labels.append(label)
-        
-        all_labels = np.asarray(all_labels , dtype='float32')
-        return all_pairs , all_labels
+            
+    zipped = list(zip(all_pairs , all_labels))
+    random.shuffle(zipped)
+    all_pairs = [a[0] for a in zipped]
+    all_labels = np.asarray([a[1] for a in zipped] , dtype='float32')
+    
+    return all_pairs , all_labels
         
 def create_dataset(org_folder_path , forg_folder_path , M=50 , K=55):
     X_train = [[] , []]
