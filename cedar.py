@@ -54,12 +54,12 @@ def create_dataset(org_folder_path , forg_folder_path , M=50 , K=55):
     train_pairs , Y_train = gen_pairs(org_folder_path , forg_folder_path , 1 , M)
     test_pairs , Y_test = gen_pairs(org_folder_path , forg_folder_path, K-M+1, K)
     
-    for pair1,pair2 in train_pairs:
-        X_train[0].append(preprocessing(pair1))
-        X_train[1].append(preprocessing(pair2))
-    for pair1,pair2 in test_pairs:
-        X_test[0].append(preprocessing(pair1))
-        X_test[1].append(preprocessing(pair2))
+    for img1,img2 in train_pairs:
+        X_train[0].append(preprocessing(img1))
+        X_train[1].append(preprocessing(img2))
+    for img1,img2 in test_pairs:
+        X_test[0].append(preprocessing(img1))
+        X_test[1].append(preprocessing(img2))
     
     X_train = np.asarray(X_train)
     X_test = np.asarray(X_test)
