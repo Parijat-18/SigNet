@@ -16,7 +16,7 @@ are placed in proximity. This is achieved by exposing the network to a pair of s
 maximizing it between dissimilar pairs.
 
 ```
-def eucledian_distance(vectors):
+def euclidian_distance(vectors):
     vect1 , vect2 = vectors
     sum_sq = K.sum(K.square(vect1 - vect2) , axis=1 , keepdims=True)
     dist = K.sqrt(K.maximum(sum_sq , K.epsilon()))
@@ -33,7 +33,7 @@ def eucledian_distance(vectors):
 * CEDAR signature database contains signatures of 55 signers.
 * Each of these signers signed 24 genuine and 24 forged signatures.
 * The dataset is resized to a fixed input size of 155 X 220 using [bilinear Interpolation](https://www.sciencedirect.com/topics/engineering/bilinear-interpolation) to train the network.
-* The [cedar.py](https://github.com/Parijat-18/SigNet/blob/main/cedar.py) implements the preprocessing and dvision protocol as mentioned in the paper.
+* The [cedar.py](https://github.com/Parijat-18/SigNet/blob/main/cedar.py) implements the preprocessing and division protocol as mentioned in the paper.
 
 
 
