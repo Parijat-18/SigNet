@@ -21,17 +21,17 @@ maximizing it between dissimilar pairs.
 
 ### CEDAR DATABASE
 
-* The model is trained using the [cedar dataset]("https://paperswithcode.com/dataset/cedar-signature") which can be downloaded from [here]("http://www.cedar.buffalo.edu/NIJ/data/signatures.rar").
+* The model is trained using the [cedar dataset](https://paperswithcode.com/dataset/cedar-signature) which can be downloaded from [here](http://www.cedar.buffalo.edu/NIJ/data/signatures.rar).
 * CEDAR signature database contains signatures of 55 signers.
 * Each of these signers signed 24 genuine and 24 forged signatures.
-* The dataset is resized to a fixed input size of 155 X 220 using [bilinear Interpolation]("https://www.sciencedirect.com/topics/engineering/bilinear-interpolation") to train the network.
+* The dataset is resized to a fixed input size of 155 X 220 using [bilinear Interpolation](https://www.sciencedirect.com/topics/engineering/bilinear-interpolation) to train the network.
 * The [cedar.py]("https://github.com/Parijat-18/SigNet/blob/main/cedar.py") implements the preprocessing and dvision protocol as mentioned in the paper.
 
 
 
 ## Loss Function
 
-[Contrastive loss]("https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec") is the most commonly used loss function
+[Contrastive loss](https://towardsdatascience.com/contrastive-loss-explaned-159f2d4a87ec) is the most commonly used loss function
 for training siamese networks.It takes the output of the network for a positive example and 
 calculates its distance to an example of the same class and contrasts that with 
 the distance to negative examples.
