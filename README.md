@@ -60,7 +60,7 @@ def contrastive_loss_with_margin(margin):
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 | Original | Genuine | Forged |
-|<img src="https://github.com/Parijat-18/SigNet/blob/main/sample_imgs/org.jpg"> |  <img 
-src="https://github.com/Parijat-18/SigNet/blob/main/sample_imgs/org2.jpg">  |  <img 
+|<img src="https://github.com/Parijat-18/SigNet/blob/main/sample_imgs/org.jpg"> |<img 
+src="https://github.com/Parijat-18/SigNet/blob/main/sample_imgs/org2.jpg">  |<img 
 src="https://github.com/Parijat-18/SigNet/blob/main/sample_imgs/forg.jpg"> |
 Predicted Label:| 0 => similar | 1 => forged |
