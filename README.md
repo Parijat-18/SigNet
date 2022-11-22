@@ -7,15 +7,23 @@ verification.
 
 
 
-
-
 ## Siamese Architecture
 
 ![App Screenshot](https://i.imgur.com/lwRkFYF.png)
 
 Siamese networks are twin networks with shared weights, which can be trained to learn a feature space where similar observations
-are placed in proximity. This is achieved by exposing the network to a pair of similar and dissimilar observations and minimizing the Euclidean distance between similar pairs while simultaneously
+are placed in proximity. This is achieved by exposing the network to a pair of similar and dissimilar observations and minimizing the [Euclidean distance](http://mathonline.wikidot.com/the-distance-between-two-vectors) between similar pairs while simultaneously
 maximizing it between dissimilar pairs.
+
+```
+def eucledian_distance(vectors):
+    vect1 , vect2 = vectors
+    sum_sq = K.sum(K.square(vect1 - vect2) , axis=1 , keepdims=True)
+    dist = K.sqrt(K.maximum(sum_sq , K.epsilon()))
+    return dist
+```
+
+
 
 ## DATA PREPARATION
 
