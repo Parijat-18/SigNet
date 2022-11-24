@@ -32,11 +32,11 @@ def gen_pairs(org_folder_path , forg_folder_path , writer_strt_indx , writer_end
         
         for pair in itertools.combinations(writer_org , 2):
             all_pairs.append(pair)
-            all_labels.append(0)
+            all_labels.append(1)
             
         for pair in itertools.product(writer_org , writer_forg):
             pairs.append(pair)
-            labels.append(1)
+            labels.append(0)
         for pair , label in (random.sample(list(zip(pairs , labels)) , 276)):
             all_pairs.append(pair)
             all_labels.append(label)
