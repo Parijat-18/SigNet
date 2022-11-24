@@ -3,7 +3,7 @@
 
 This is my implementation of the [signet](https://arxiv.org/pdf/1707.02131.pdf) paper
 which is a convolutional Siamese Network for writer independent offline signature
-verification.
+verification model.
 
 
 
